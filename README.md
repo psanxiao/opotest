@@ -93,10 +93,10 @@ The following guide details how to deploy OpoTest on a dedicated production serv
 ```mermaid
 flowchart LR
     User["User / Browser"] -->|HTTP / HTTPS| Apache["Apache Reverse Proxy"]
-    Apache -->|"/" (Static assets)| Dist["frontend/dist"]
-    Apache -->|"/api"| FastAPI["FastAPI :8001"]
-    FastAPI -->|"PostgreSQL :5435"| DB[("PostgreSQL Docker")]
-    FastAPI -->|"CLI Subprocess"| AGY["Antigravity CLI / Gemini"]
+    Apache -->|Static assets| Dist["frontend/dist"]
+    Apache -->|/api| FastAPI["FastAPI :8001"]
+    FastAPI -->|PostgreSQL :5435| DB[("PostgreSQL Docker")]
+    FastAPI -->|CLI Subprocess| AGY["Antigravity CLI / Gemini"]
 ```
 
 ---

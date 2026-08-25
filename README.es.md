@@ -93,10 +93,10 @@ A continuación se detallan las instrucciones para desplegar la aplicación en u
 ```mermaid
 flowchart LR
     User["Usuario / Navegador"] -->|HTTP / HTTPS| Apache["Apache Reverse Proxy"]
-    Apache -->|"/" (Archivos estáticos)| Dist["frontend/dist"]
-    Apache -->|"/api"| FastAPI["FastAPI :8001"]
-    FastAPI -->|"PostgreSQL :5435"| DB[("PostgreSQL Docker")]
-    FastAPI -->|"Subproceso CLI"| AGY["Antigravity CLI / Gemini"]
+    Apache -->|Archivos estáticos| Dist["frontend/dist"]
+    Apache -->|/api| FastAPI["FastAPI :8001"]
+    FastAPI -->|PostgreSQL :5435| DB[("PostgreSQL Docker")]
+    FastAPI -->|Subproceso CLI| AGY["Antigravity CLI / Gemini"]
 ```
 
 ---

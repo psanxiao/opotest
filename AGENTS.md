@@ -45,3 +45,9 @@ No backend linter, formatter, or typecheck configured. No test suite exists.
 - **Vite dev proxy**: `/api` requests are forwarded to `http://127.0.0.1:8001`. Production uses Apache as reverse proxy with the same convention.
 - **PDF upload limit**: Apache config sets `LimitRequestBody` to 50 MB.
 - **Frontend port**: 5173. Backend port: 8001.
+
+## Git & Commit Conventions
+
+- Always use **Conventional Commits** format (e.g., `feat:`, `fix:`, `refactor:`, `docs:`, `chore:`, `style:`).
+- Commit messages must always be in **English**.
+
